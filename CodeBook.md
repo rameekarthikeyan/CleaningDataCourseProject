@@ -3,10 +3,8 @@ Data from accelerometers from Samsung Galaxy S smartphone
 *All the information about the data and the variables have been taken from the README file of the UCI HAR dataset*
 
 
-
-
 Variables:
-__________
+----------
 1. ActivityNames - Name of the activity performed by the volunteers
 	+ Laying
 	+ Sitting
@@ -84,14 +82,14 @@ __________
 68. fBodyBodyGyroJerkMagstd - frequency domain magnitude of the body angular velocity jerk signal's standard deviation
 
 Data:
-_____
+-----
 The above mentioned variables have been measured for 30 different subjects and for 6 different activities. Observations are stored in the first data set of the course project. Since there are many observations for same activity and subject pair, tidy data principle is applied to get observation for each activity and subject pair by taking the average of the variables for each activity and subject pair. Tidy data is stored in second dataset of the course project.
 
 Instructions for getting the tidy dataset:
-__________________________________________
+------------------------------------------
 
-*Operating System - Windows Vista
-*R version - 3.0.3
+* Operating System - Windows Vista
+* R version - 3.0.3
 
 1. Step 1 - Download the raw UCI HAR dataset and unzip the files in the working directory.
 2. Step 2 - Run the "Run_analysis.R" script on R.

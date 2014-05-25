@@ -1,11 +1,11 @@
 Run_analysis script 
 ===================
-Introduction
-____________
-This file contains the details of how the Run_analysis script works. *The Run_analysis script assumes that the required raw dataset is downloaded and the files are unzipped to the working directory*. 
+Introduction:
+-------------
+This file contains the details of how the Run_analysis script works. **The Run_analysis script assumes that the required raw dataset is downloaded and the files are unzipped to the working directory.**
 
 Script details:
-______________
+---------------
 1. The script begins by loading the library of the data.table package as the script uses the function "data.table()".
 2. File names of the required files such as X_train.txt, y_train.txt, subject_train.txt in the directory "UCI HAR Dataset/train" are set and then loaded into R by using the function "read.table()".
 3. The different variables (561 feature vector variables, activity label, subject) from the above are combined in one data table by using the function "data.table()".
@@ -15,7 +15,7 @@ ______________
 7. The data tables from the steps 3 and 5 are merged using the function "rbind()". This yields the course project's step 1 result.
 8. The column names ( 561 feature vector variable names) of the new merged data table are renamed by using the feature_data datatable created in step 6. The meta characters in the variable names are removed by using the function "gsub()".
 9. In order to extract the variables that are on mean and standard deviation for each measurement, 
-	* the variables that contains the word "mean" at the end of the string are selected 
+	* the variables that contains the word "mean" at the end of the string are selected. 
 	* the variables that contains the word "mean" and not succeeded by the letter F are selected. Since "meanFreq" is another variable and not a mean value measurement, the variables that contains "meanFreq" are excluded.
 	* the variables that contains the word "std" are selected.
 	* function "grep()" is used to make the selection of the variables.
